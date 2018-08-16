@@ -1,0 +1,119 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'a b b'
+                    'c c c';
+    grid-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    min-height: 500px;
+}
+
+.container img{
+    grid-area: a;
+    width: 270px;
+    height: auto;
+}
+
+.name {
+    font-size: 70px;
+    line-height: 83px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: -95px;
+    color: #002E5D;
+    opacity: .80;
+    background-color: #fff;
+}
+
+.content {
+    grid-area: c;
+}
+
+.content__projects {
+    font-size: 3rem;
+}
+
+.content__projects__item {
+    font-size: 2rem;
+    color: #000;
+}
+
+.content__projects__item p{
+    width: 100%;
+}
+
+.content__projects__item:hover {
+    color: #0057B8;
+}
+
+.description {
+    grid-area: b;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.content__email{
+    color: #000;
+    font-size: 2rem;
+}
+
+.content__phone {
+    color: #000;
+    font-size: 2rem;
+}
+
+.content__email:hover {
+    color: #0057B8;
+}
+
+.content__phone:hover {
+    color: #0057B8;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1399px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'a b b'
+        'c c c';
+        grid-gap: 30px;
+    }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 60px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'a b'
+        'c c';
+
+    }
+
+}
+
+@media (min-width: 0) and (max-width: 699px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 60px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'a'
+        'b'
+        'c';
+    }
+    .container img {
+        margin: auto;
+    }
+}
